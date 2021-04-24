@@ -4,4 +4,4 @@ This app has been made by using MVVM architecture by using DataBinding, ViewBind
 Retrofit has been use to fetch data from backend.
 Data wont be lost if you rotate screen.
 
-Apk Link : 
+Apk Link : https://drive.google.com/drive/u/0/folders/19ivat0bxEJ7-v91OSoW1uoEN7D9yPgFP
