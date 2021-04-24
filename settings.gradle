@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "MVVM_ JetPack_CleanActhitecture_Retrofit_Demo"
