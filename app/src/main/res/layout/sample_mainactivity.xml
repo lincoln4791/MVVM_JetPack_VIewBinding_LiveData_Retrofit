@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="dogsModel"
+            type="com.example.mvvm_jetpack_cleanacthitecture_retrofit_demo.model.Model_MainActivity" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:loadImage="@{dogsModel.image}"
+            android:id="@+id/iv_profilePicture_sampleMainActivity"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/ic_launcher"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_name_sampleMainActivity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="@{dogsModel.name}"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/tv_lifeSpan_sampleMainActivity"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_profilePicture_sampleMainActivity"/>
+
+
+
+        <TextView
+            android:id="@+id/tv_lifeSpan_sampleMainActivity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="@{dogsModel.lifeSpan}"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toStartOf="@id/tv_counter_sampleMainActivity"
+            app:layout_constraintStart_toEndOf="@+id/iv_profilePicture_sampleMainActivity"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name_sampleMainActivity" />
+
+        <TextView
+            android:id="@+id/tv_counter_sampleMainActivity"
+            android:layout_width="40dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="@{dogsModel.counter}"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_profilePicture_sampleMainActivity"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_lifeSpan_sampleMainActivity"
+            app:layout_constraintTop_toTopOf="@id/tv_lifeSpan_sampleMainActivity" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
